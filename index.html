@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AWS CI/CD Pipeline Deployment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #d0d0d0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+            color: #00e5ff;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .pipeline {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .pipeline h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .pipeline-flow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .step {
+            background: rgba(0,0,0,0.35);
+            padding: 15px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .status {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(90deg, #00ffcc, #00e5ff);
+            color: #000;
+            font-weight: 700;
+            border-radius: 30px;
+            box-shadow: 0 0 20px rgba(0,255,204,0.6);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 10px rgba(0,255,204,0.4); }
+            50% { box-shadow: 0 0 25px rgba(0,255,204,0.8); }
+            100% { box-shadow: 0 0 10px rgba(0,255,204,0.4); }
+        }
+
+        .footer {
+            margin-top: 70px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #b0b0b0;
+        }
+
+        .footer span {
+            color: #00e5ff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🚀 AWS CI/CD Deployment</h1>
+        <p>Automated Pipeline | Cloud Native | DevOps Ready</p>
+    </div>
+
+    <div class="card-grid">
+        <div class="card">
+            <h3>Source Control</h3>
+            <p>GitHub / CodeCommit integrated with AWS CodePipeline for automated source retrieval and version control.</p>
+        </div>
+
+        <div class="card">
+            <h3>Build System</h3>
+            <p>AWS CodeBuild executes Docker builds, unit tests, linting, and artifact packaging.</p>
+        </div>
+
+        <div class="card">
+            <h3>Container Registry</h3>
+            <p>Docker images stored securely in Amazon ECR with versioned tags and lifecycle policies.</p>
+        </div>
+
+        <div class="card">
+            <h3>Deployment</h3>
+            <p>Automated deployment using AWS CodeDeploy / ECS / EC2 / S3 static hosting.</p>
+        </div>
+
+        <div class="card">
+            <h3>Security</h3>
+            <p>IAM Roles, least-privilege policies, pipeline encryption, and secure artifact handling.</p>
+        </div>
+
+        <div class="card">
+            <h3>Observability</h3>
+            <p>CloudWatch logs, metrics, alarms, and deployment monitoring integrated into the pipeline.</p>
+        </div>
+    </div>
+
+    <div class="pipeline">
+        <h2>CI/CD Pipeline Flow</h2>
+        <div class="pipeline-flow">
+            <div class="step">GitHub</div>
+            <div class="step">CodePipeline</div>
+            <div class="step">CodeBuild</div>
+            <div class="step">Docker Build</div>
+            <div class="step">Amazon ECR</div>
+            <div class="step">CodeDeploy</div>
+            <div class="step">EC2 / ECS / S3</div>
+            <div class="step">Production</div>
+        </div>
+    </div>
+
+    <div class="status">
+        <div class="status-badge">DEPLOYMENT SUCCESSFUL ✅</div>
+    </div>
+
+    <div class="footer">
+        <p>Deployed using <span>AWS CI/CD Pipeline</span> | DevOps Automation Project</p>
+        <p>Build • Test • Package • Deploy • Monitor</p>
+    </div>
+
+</div>
+
+</body>
+</html>
